@@ -7,22 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27716B7A27DF8A820002DB3F /* SDL2.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 27A8FC8D27D7DF8F00799DC2 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		27716B7E27DFD80C0002DB3F /* SDL2 in Frameworks */ = {isa = PBXBuildFile; productRef = 27716B7D27DFD80C0002DB3F /* SDL2 */; };
 		27A8FC7B27D7DEF200799DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8FC7A27D7DEF200799DC2 /* AppDelegate.swift */; };
 		27A8FC7D27D7DEF200799DC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8FC7C27D7DEF200799DC2 /* ViewController.swift */; };
 		27A8FC7F27D7DEF400799DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A8FC7E27D7DEF400799DC2 /* Assets.xcassets */; };
 		27A8FC8227D7DEF400799DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A8FC8027D7DEF400799DC2 /* Main.storyboard */; };
-		27A8FC8B27D7DF2900799DC2 /* SDL2 in Frameworks */ = {isa = PBXBuildFile; productRef = 27A8FC8A27D7DF2900799DC2 /* SDL2 */; settings = {ATTRIBUTES = (Required, ); }; };
-		27A8FC8E27D7DF8F00799DC2 /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A8FC8D27D7DF8F00799DC2 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		27A8FC8C27D7DF5000799DC2 /* CopyFiles */ = {
+		27716B7527DF29C70002DB3F /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				27A8FC8E27D7DF8F00799DC2 /* SDL2.framework in CopyFiles */,
+				27716B7A27DF8A820002DB3F /* SDL2.framework in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8FC8C27D7DF5000799DC2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 0;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A8FC8B27D7DF2900799DC2 /* SDL2 in Frameworks */,
+				27716B7E27DFD80C0002DB3F /* SDL2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,14 +108,16 @@
 				27A8FC7427D7DEF200799DC2 /* Frameworks */,
 				27A8FC7527D7DEF200799DC2 /* Resources */,
 				27A8FC8C27D7DF5000799DC2 /* CopyFiles */,
+				27716B7527DF29C70002DB3F /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				27716B8027DFD89A0002DB3F /* PBXTargetDependency */,
 			);
 			name = test;
 			packageProductDependencies = (
-				27A8FC8A27D7DF2900799DC2 /* SDL2 */,
+				27716B7D27DFD80C0002DB3F /* SDL2 */,
 			);
 			productName = test;
 			productReference = 27A8FC7727D7DEF200799DC2 /* test.app */;
@@ -136,7 +148,7 @@
 			);
 			mainGroup = 27A8FC6E27D7DEF200799DC2;
 			packageReferences = (
-				27A8FC8927D7DF2900799DC2 /* XCRemoteSwiftPackageReference "SwiftSDL2" */,
+				27716B7C27DFD80C0002DB3F /* XCRemoteSwiftPackageReference "SwiftSDL2" */,
 			);
 			productRefGroup = 27A8FC7827D7DEF200799DC2 /* Products */;
 			projectDirPath = "";
@@ -170,6 +182,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27716B8027DFD89A0002DB3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 27716B7F27DFD89A0002DB3F /* SDL2 */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		27A8FC8027D7DEF400799DC2 /* Main.storyboard */ = {
@@ -313,6 +332,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -320,6 +340,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pablojimenez.test;
@@ -350,6 +372,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pablojimenez.test;
@@ -383,7 +406,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		27A8FC8927D7DF2900799DC2 /* XCRemoteSwiftPackageReference "SwiftSDL2" */ = {
+		27716B7C27DFD80C0002DB3F /* XCRemoteSwiftPackageReference "SwiftSDL2" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ctreffs/SwiftSDL2";
 			requirement = {
@@ -394,9 +417,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		27A8FC8A27D7DF2900799DC2 /* SDL2 */ = {
+		27716B7D27DFD80C0002DB3F /* SDL2 */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 27A8FC8927D7DF2900799DC2 /* XCRemoteSwiftPackageReference "SwiftSDL2" */;
+			package = 27716B7C27DFD80C0002DB3F /* XCRemoteSwiftPackageReference "SwiftSDL2" */;
+			productName = SDL2;
+		};
+		27716B7F27DFD89A0002DB3F /* SDL2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27716B7C27DFD80C0002DB3F /* XCRemoteSwiftPackageReference "SwiftSDL2" */;
 			productName = SDL2;
 		};
 /* End XCSwiftPackageProductDependency section */

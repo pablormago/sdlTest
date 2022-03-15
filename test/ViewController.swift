@@ -75,6 +75,11 @@ func Sdl_Controller_Joystick (){
                 quit = true
             case SDL_JOYAXISMOTION:
                 print("AXIS")
+                print("\(event.jaxis.axis) - \(event.jaxis.value)")
+                DispatchQueue.main.sync {
+                    myLabel.stringValue = "AXIS - \(event.jaxis.axis) - \(event.jaxis.value)"
+                }
+                
                 
             case SDL_JOYBUTTONDOWN:
                 print("BOTON")
