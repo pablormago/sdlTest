@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SDL2",
+        "repositoryURL": "https://github.com/ctreffs/SwiftSDL2",
+        "state": {
+          "branch": "master",
+          "revision": "e4dc10ef8ddde493c5baf2dc2a5b9624701bad3e",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

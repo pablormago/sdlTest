@@ -106,6 +106,7 @@
 			buildPhases = (
 				27A8FC7327D7DEF200799DC2 /* Sources */,
 				27A8FC7427D7DEF200799DC2 /* Frameworks */,
+				2787DA5B27E724FB00DD9725 /* ShellScript */,
 				27A8FC7527D7DEF200799DC2 /* Resources */,
 				27A8FC8C27D7DF5000799DC2 /* CopyFiles */,
 				27716B7527DF29C70002DB3F /* Embed Libraries */,
@@ -170,6 +171,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2787DA5B27E724FB00DD9725 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python $PROJECT_DIR/External/xcodedevtools/copy_dylibs.py\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27A8FC7327D7DEF200799DC2 /* Sources */ = {

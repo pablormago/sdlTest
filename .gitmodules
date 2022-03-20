@@ -1,0 +1,3 @@
+[submodule "test/External/xcodedevtools"]
+	path = test/External/xcodedevtools
+	url = https://github.com/trojanfoe/xcodedevtools
